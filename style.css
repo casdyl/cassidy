@@ -1,0 +1,50 @@
+.cassidyHeader {
+  font-size: 200%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-top: 5%;
+  display: flex;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid rgb(0, 0, 0);
+  margin: 1em 0;
+  padding: 0;
+}
+
+.button {
+  font-size: 150%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  display: flex;
+  margin: 2% 2% 2% 10%;
+}
+
+.body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  display: none;
+  margin: 2% 2% 2% 10%;
+}
+
+.footerGrid {
+  display: flex;
+  width: 100%;
+  margin-top: 10%;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.footerCell {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-shrink: 0;
+  padding: 5%;
+  float: left;
+  box-sizing: border-box;
+  display: inline-block;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
