@@ -15,10 +15,18 @@ hr {
 }
 
 .button {
+  width: 25vw;
   font-size: 150%;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 2% 2% 2% 10%;
+}
+@media screen and (max-width: 500px) {
+  .button {
+    width: 80%;
+  }
 }
 
 .body {
@@ -31,8 +39,7 @@ hr {
   display: flex;
   width: 100%;
   margin-top: 10%;
-  border-left: 2px solid black;
-  border-top: 2px solid black;
+  border: 2px solid black;
 }
 
 .footerCell {
@@ -42,9 +49,8 @@ hr {
   flex-basis: 0;
   flex-shrink: 0;
   padding: 5%;
-  float: left;
-  box-sizing: border-box;
-  display: inline-block;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+}
+@media (max-width: 500px) {
+  .footerCell {
+  }
 }
