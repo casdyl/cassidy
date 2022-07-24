@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,14 +8,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body style="background-color: #fffaf3">
+    <!-- Header and screen-wide underline -->
     <div class="cassidyHeader">CASSIDY LOWE</div>
     <hr />
+
+    <!-- ABOUT -->
     <div class="about button" onclick="handleDisplay(aboutButton, aboutBody)">
       ABOUT
       <div>+</div>
     </div>
-    <div class="aboutBody body">My name is Cassidy.</div>
+    <div class="aboutBody body">
+      I’m Cassidy, a recent graduate from the University of British Columbia’s
+      Sauder School of Business. After a year in the entertainment industry as
+      an e-commerce and software systems specialist, I am now pursuing my
+      passion and transitioning into the real estate development world.
+    </div>
+
+    <!-- EXPERIENCE -->
     <div
       class="experience button"
       onclick="handleDisplay(experienceButton, experienceBody)"
@@ -23,24 +35,46 @@
       <div>+</div>
     </div>
     <div class="experienceBody body">This is my experience.</div>
+
+    <!-- GET IN TOUCH -->
     <div
       class="contact button"
       onclick="handleDisplay(contactButton, contactBody)"
     >
-      CONTACT
+      GET IN TOUCH
       <div>+</div>
     </div>
-    <div class="contactBody body">This is my contact information.</div>
+    <div class="contactBody body">
+      <div class="contactGrid">
+        <div class="contactContents">
+          <a href="mailto: cassidymlowe@gmail.com" class="contactFont">EMAIL</a>
+        </div>
+        <div class="contactContents">
+          <a href="tel: +1604-328-6820" class="contactFont">PHONE</a>
+        </div>
+        <div class="contactContents">
+          <a href="www.linkedin.com/in/cassidylowe" class="contactFont"
+            >LINKEDIN</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- MORE -->
     <div class="more button" onclick="handleDisplay(moreButton, moreBody)">
       MORE
       <div>+</div>
     </div>
     <div class="moreBody body">This is more.</div>
+
+    <!-- FOOTER -->
     <div class="footerGrid">
       <div class="footerCell">CASSIDY LOWE</div>
       <div class="footerCell">VANCOUVER</div>
       <div class="footerCell">CONTACT</div>
     </div>
+
+    <!-- CSS SCRIPT -->
     <script src="script.js"></script>
   </body>
 </html>
