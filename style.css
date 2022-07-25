@@ -17,10 +17,61 @@ hr {
   padding: 0;
 }
 
+/* TITLE UNDERLINE */
+hr.titleLine {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* DEFAULT FONT */
 .defaultFont {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   color: black;
+}
+
+/* BOLD FONT */
+.boldFont {
+  font-weight: bold;
+}
+
+/* DEFAULT TITLE STYLE */
+.bodyTitle {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 100%;
+}
+
+/* DEFAULT SECTION STYLE */
+.sectionWrapper {
+  margin-bottom: 10%;
+}
+
+/* CONTENT OF ITEMS */
+/* BODY (AFTER CLICK) */
+.body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  display: none;
+  margin: 2% 2% 2% 35%;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: justify;
+}
+@media screen and (max-width: 600px) {
+  .body {
+    margin: 8%;
+    align-items: center;
+  }
+}
+
+/* ABOUT */
+.aboutBody {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* EXPERIENCE */
+.experienceBody {
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /* NAVIGATION */
@@ -41,47 +92,48 @@ hr {
   }
 }
 
-/* CONTENT OF ITEMS */
-/* BODY (AFTER CLICK) */
-.body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  display: none;
-  margin: 2% 2% 2% 35%;
-  padding-left: 10%;
-  padding-right: 10%;
-  text-align: justify;
-}
-@media screen and (max-width: 600px) {
-  .body {
-    margin: 10%;
-    align-items: center;
-  }
+/* GET IN TOUCH */
+.contactBody {
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-/* GET IN TOUCH */
-/* GET IN TOUCH TABLE PARENT */
-.contactGrid {
+/* GET IN TOUCH BUTTON PARENT */
+#contactButtons {
   width: 100%;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  margin: 0 auto;
-}
-/* GET IN TOUCH TABLE CHILD */
-.contactContents {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fffaf3;
   text-align: center;
   color: black;
-  padding: 5%;
-  border: 2px solid black;
-  margin: -1px;
+}
+@media screen and (max-width: 600px) {
+  #contactButtons {
+    flex-direction: column;
+  }
 }
 .contactFont {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   color: black;
 }
-.contactContents:hover {
+a.contactFont:hover {
   background-color: black;
-  color: #fff3af;
+  color: #fffaf3;
+}
+/* GET IN TOUCH BUTTON CHILD */
+button {
+  width: 100%;
+  border: 2px solid black;
+  padding: 5%;
+  margin: -1px;
+  background: none;
+  color: black;
+  font-size: inherit;
+  outline: none;
+}
+button:hover {
+  color: #fffaf3;
+  background: black;
 }
 
 /* FOOTER */
@@ -91,7 +143,7 @@ hr {
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 .footerGrid:after {
   content: "";
@@ -113,9 +165,4 @@ hr {
     float: none;
     width: 100%;
   }
-}
-
-/* DONT UNDERLINE LINKS */
-a {
-  text-decoration: none;
 }
