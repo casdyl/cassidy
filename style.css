@@ -3,12 +3,13 @@
 .cassidyHeader {
   font-size: 200%;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 1%;
   display: flex;
 }
 /* HEADER UNDERLINE */
 hr {
+  position: relative;
   display: block;
   height: 1px;
   border: 0;
@@ -48,30 +49,40 @@ hr.titleLine {
 /* CONTENT OF ITEMS */
 /* BODY (AFTER CLICK) */
 .body {
+  position: absolute;
+  top: 83px;
+  max-height: 55%;
+  overflow: auto;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   display: none;
   margin: 2% 2% 2% 35%;
   padding-left: 10%;
   padding-right: 10%;
   text-align: justify;
+  width: 40%;
 }
 @media screen and (max-width: 600px) {
   .body {
+    position: static;
     margin: 8%;
     align-items: center;
+    overflow: hidden;
+    width: auto;
   }
 }
 
 /* ABOUT */
 .aboutBody {
   flex-direction: column;
-  flex-wrap: wrap;
+}
+
+.aboutButton {
+  padding-bottom: 20%;
 }
 
 /* EXPERIENCE */
 .experienceBody {
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 /* NAVIGATION */
@@ -84,6 +95,8 @@ hr.titleLine {
   align-items: center;
   justify-content: space-between;
   margin: 2% 2% 2% 10%;
+  cursor: pointer;
+  user-select: none;
 }
 /* KEEP TITLE AND + SYMBOL ON ONE LINE */
 @media screen and (max-width: 600px) {
@@ -94,10 +107,10 @@ hr.titleLine {
 
 /* GET IN TOUCH */
 .contactBody {
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
+  overflow: visible;
 }
-
 /* GET IN TOUCH BUTTON PARENT */
 #contactButtons {
   width: 100%;
@@ -130,10 +143,16 @@ button {
   color: black;
   font-size: inherit;
   outline: none;
+  cursor: pointer;
 }
 button:hover {
   color: #fffaf3;
   background: black;
+}
+
+/* MORE */
+.moreBody {
+  flex-direction: column;
 }
 
 /* FOOTER */
@@ -143,11 +162,19 @@ button:hover {
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 20%;
+  margin-top: 25%;
+  position: fixed;
+  bottom: 2%;
 }
 .footerGrid:after {
   content: "";
   clear: both;
+}
+@media screen and (max-width: 600px) {
+  .footerGrid {
+    /* position: static; */
+    margin-top: 50%;
+  }
 }
 /* FOOTER CHILD */
 .footerCell {
