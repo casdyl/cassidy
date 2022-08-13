@@ -1,3 +1,35 @@
+body {
+  margin: 0;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 160px; /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  height: 160px; /* Footer height */
+  justify-content: space-around;
+  /* margin-top: 25%; */
+}
+#footer:after {
+  content: "";
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  #footer {
+    /* position: fixed; */
+    margin-top: auto;
+  }
+}
+
 /* HEADER */
 /* HEADER TITLE */
 .cassidyHeader {
@@ -51,11 +83,12 @@ hr.titleLine {
 .body {
   position: absolute;
   top: 83px;
-  max-height: 55%;
+  bottom: 160px;
+  /* min-height: 100vh; */
   overflow: auto;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   display: none;
-  margin: 2% 2% 2% 35%;
+  margin: 0% 2% 2% 35%;
   padding-left: 10%;
   padding-right: 10%;
   text-align: justify;
@@ -110,6 +143,7 @@ hr.titleLine {
   flex-direction: row;
   flex-wrap: wrap;
   overflow: visible;
+  align-content: flex-start;
 }
 /* GET IN TOUCH BUTTON PARENT */
 #contactButtons {
@@ -157,7 +191,7 @@ button:hover {
 
 /* FOOTER */
 /* FOOTER PARENT */
-.footerGrid {
+/* .footerGrid {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -172,10 +206,13 @@ button:hover {
 }
 @media screen and (max-width: 600px) {
   .footerGrid {
-    /* position: static; */
-    margin-top: 50%;
-  }
-}
+    position: fixed;
+    margin-top: auto;
+    bottom: 10px;
+    /* margin-top: 50%; */
+/* }
+} */
+
 /* FOOTER CHILD */
 .footerCell {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -183,11 +220,16 @@ button:hover {
   padding: 5%;
   flex: auto;
   border: 2px solid black;
+  /* border-left: outset; */
+  /* border-right: outset; */
   float: left;
   margin: -1px;
+  margin-top: auto;
+  width: auto;
 }
 @media screen and (max-width: 600px) {
   .footerCell {
+    /* position: absolute; */
     display: block;
     float: none;
     width: 100%;
